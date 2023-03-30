@@ -82,6 +82,10 @@ export class UserService {
     return this.httpClient.post(this.PATH_API+'/registerNewManager', registerData);
   }
 
+  public deleteUser(userName:string){
+    return this.httpClient.delete(this.PATH_API+'/deleteUser/'+userName);
+  }
+
 
 // public getUserByUserName(userName:string){
 //   return this.httpClient.get<User>(this.PATH_API+'/getUserById/'+ userName);

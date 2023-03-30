@@ -27,6 +27,12 @@ import { ComplaintRegisterComponent } from './complaint-register/complaint-regis
 import { AuthGuard } from './auth.guard';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './auth.interceptor';
+import { CustomerRegComponent } from './customer-reg/customer-reg.component';
+import { MycomplaintsComponent } from './mycomplaints/mycomplaints.component';
+import { AllcomplaintsComponent } from './allcomplaints/allcomplaints.component';
+import { UserListComponent } from './user-list/user-list.component';
+import { AllcomplaintsManagerComponent } from './allcomplaints-manager/allcomplaints-manager.component';
+import { ComplaintEngineerComponent } from './complaint-engineer/complaint-engineer.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +44,13 @@ import { AuthInterceptor } from './auth.interceptor';
     EngineerHomeComponent,
     ManagerHomeComponent,
     CustomerHomeComponent,
-    ComplaintRegisterComponent
+    ComplaintRegisterComponent,
+    CustomerRegComponent,
+    MycomplaintsComponent,
+    AllcomplaintsComponent,
+    UserListComponent,
+    AllcomplaintsManagerComponent,
+    ComplaintEngineerComponent
   ],
   imports: [
     BrowserModule,

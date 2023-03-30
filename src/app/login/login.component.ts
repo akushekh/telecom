@@ -11,7 +11,7 @@ import { UserService } from '../user.service';
 })
 export class LoginComponent implements OnInit {
 
-  msg:any;
+  msg:any; 
   constructor(
     private userService:UserService,
     private userAuthSrvice:UserAuthService,
@@ -31,10 +31,16 @@ export class LoginComponent implements OnInit {
       const role = response.user.role[0].roleName;//the value of role= Admin or User is present inside
       //user-->role-->roleName
       if(role =='Admin'){
-        this.router.navigate(['/admin']);
+        this.router.navigate(['/adminHome']);
       }
-      else if(role =='User'){
-        this.router.navigate(['/user']);
+      else if(role =='Customer'){
+        this.router.navigate(['/customerHome']);
+      }
+      else if(role =='Manager'){
+        this.router.navigate(['/managerHome']);
+      }
+      else if(role =='Engineer'){
+        this.router.navigate(['/engineerHome']);
       }
       else{
         this.msg = "Entered Credentials are incorrect";
@@ -49,7 +55,7 @@ export class LoginComponent implements OnInit {
   }
 
   registerUser(){
-    this.router.navigate(['/userReg']);
+    this.router.navigate(['/customerReg']);
   }
 
 }
